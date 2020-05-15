@@ -1,12 +1,12 @@
 {
-  "name": "jensendw/traefik",
+  "name": "barskern/traefik",
   "version": "0.0.6",
   "author": "Daniel Jensen",
   "summary": "Module for installing and managing traefik reverse proxy service",
   "license": "Apache-2.0",
-  "source": "https://github.com/jensendw/traefik-puppet.git",
-  "project_page": "https://github.com/jensendw/traefik-puppet",
-  "issues_url": "https://github.com/jensendw/traefik-puppet/issues",
+  "source": "https://github.com/barskern/traefik-puppet.git",
+  "project_page": "https://github.com/barskern/traefik-puppet",
+  "issues_url": "https://github.com/barskern/traefik-puppet/issues",
   "dependencies": [
     {"name":"puppetlabs/stdlib","version_requirement":">= 4.1.0"}
   ],
