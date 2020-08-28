@@ -4,8 +4,9 @@
 #
 class traefik::service {
   service { $traefik::service_name:
-    ensure  => running,
-    enable  => true,
-    require => File[$traefik::init_path],
+    ensure    => running,
+    enable    => true,
+    require   => File[$traefik::init_path],
+    subscribe => File[$traefik::config_file_path],
   }
 }
