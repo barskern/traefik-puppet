@@ -19,6 +19,14 @@ class traefik::params {
         $init_style = 'systemd'
         $init_path  = "/lib/systemd/system/${service_name}.service"
       }
+      '8': {
+        $init_style = 'systemd'
+        $init_path  = "/lib/systemd/system/${service_name}.service"
+      }
+      '9': {
+        $init_style = 'systemd'
+        $init_path  = "/lib/systemd/system/${service_name}.service"
+      }
       default: {
         fail('Unsupported operating system version')
       }
