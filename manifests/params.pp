@@ -13,7 +13,7 @@ class traefik::params {
   $file_limit                     = '60000'
 
   #set init style
-  if $::operatingsystem =~ /Scientific|CentOS|RedHat|OracleLinux/ {
+  if $::operatingsystem =~ /Scientific|Rocky|CentOS|RedHat|OracleLinux/ {
     case $::operatingsystemmajrelease {
       '7': {
         $init_style = 'systemd'
