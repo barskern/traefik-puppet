@@ -1,10 +1,10 @@
 [Unit]
-Description=Traefik
+Description=Traefik - HTTP and TCP Proxy
 Wants=basic.target
 After=basic.target network.target
 
 [Service]
-ExecStart=/opt/<%= scope.lookupvar("traefik::package_name") %>/<%= scope.lookupvar("traefik::package_name") %> --configfile=<%= scope.lookupvar("traefik::config_file_path") %>
+ExecStart=/opt/<%= scope.lookupvar("traefik::package_name") %>-<%= scope.lookupvar("traefik::version") %>/<%= scope.lookupvar("traefik::package_name") %> --configfile=<%= scope.lookupvar("traefik::config_file_path") %>
 KillMode=process
 Restart=on-failure
 RestartSec=42s

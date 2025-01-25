@@ -7,7 +7,7 @@ class traefik::install {
     package { 'wget': ensure => installed }
   }
 
-  $install_path = "/opt/${traefik::package_name}"
+  $install_path = "/opt/${traefik::package_name}-${traefik::version}"
   file { $install_path:
     ensure => 'directory',
     mode   => '0755',

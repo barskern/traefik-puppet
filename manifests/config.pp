@@ -6,12 +6,12 @@ class traefik::config {
   file { $traefik::init_path:
     content => template("traefik/traefik.${traefik::init_style}.erb"),
     mode    => '0644',
-    require => File["/opt/${traefik::package_name}/${traefik::package_name}"],
+    require => File["/opt/${traefik::package_name}-${traefik::version}/${traefik::package_name}"],
   }
 
   file { '/etc/systemd/system/traefik.service.d':
     ensure  => 'directory',
-    require => File["/opt/${traefik::package_name}/${traefik::package_name}"],
+    require => File["/opt/${traefik::package_name}-${traefik::version}/${traefik::package_name}"],
   }
 
   file { '/etc/systemd/system/traefik.service.d/limits.conf':
