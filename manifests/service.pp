@@ -7,6 +7,9 @@ class traefik::service {
     ensure    => running,
     enable    => true,
     require   => File[$traefik::init_path],
-    subscribe => File[$traefik::config_file_path],
+    subscribe => [
+      File[$traefik::config_file_path],
+      File["/opt/${traefik::package_name}-${traefik::version}/${traefik::package_name}"],
+    ]
   }
 }
